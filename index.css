@@ -1,0 +1,420 @@
+/* Global Reset & Base */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    background: #dedede;
+    overflow-x: hidden;
+}
+
+.page {
+    max-width: 1400px;
+    margin: 8px auto;
+    background: #fff;
+}
+
+/* Navbar */
+.navbar {
+    font: bold larger 'Montserrat', 'Times New Roman', Times, serif;
+    background: #ff7a79;
+    padding: 15px 24px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: text;
+}
+
+.menu-icon {
+    width: 30px;
+    margin-left: auto;
+    display: block;
+    cursor: text;
+}
+
+/* Hero Section */
+.hero-section {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: stretch;
+    background: linear-gradient(90deg, #fff3a6 0%, #ffc7c2 100%);
+    min-height: 720px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.hero-text {
+    padding: 64px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 62px;
+    font-weight: 650;
+    letter-spacing: 6px;
+    color: #111;
+    margin: 24px 0;
+}
+
+.hero-text p {
+    color: #212121;
+    margin-bottom: 20px;
+    max-width: 560px;
+    font-size: 16px;
+}
+
+.click-me-btn {
+    background: #ff7a79;
+    color: #fff;
+    width: 230px;
+    height: 56px;
+    border: none;
+    margin-top: 60px;
+    font-size: 13px;
+    transition: opacity .2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    cursor: text;
+}
+
+.click-me-btn:hover {
+    opacity: .95;
+}
+
+/* Second Page */
+.second-page {
+    padding: 40px;
+    text-align: center;
+}
+
+/* Gallery Section */
+.gallery-section {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    align-items: center;
+    column-gap: 80px;
+    padding: 96px;
+    border-top: 10px solid #dedede;
+    background: radial-gradient(1200px 600px at -10% 0%, #ffeaa7 0%, transparent 70%),
+        radial-gradient(1200px 600px at 110% 50%, #ffb0ff 0%, transparent 50%),
+        linear-gradient(90deg, #ffe7a1 0%, #ffc7ff 100%);
+    min-height: 720px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template: repeat(2, 220px) / repeat(2, 220px);
+    gap: 24px;
+    width: 464px;
+    min-height: 464px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-grid .grid-c {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    height: 464px;
+}
+
+.callout {
+    background: #ff7a79;
+    padding: 35px 35px;
+    width: 650px;
+    justify-self: start;
+}
+
+.callout .small {
+    letter-spacing: 2px;
+    color: #2a2a2a;
+    margin-bottom: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 150;
+    text-transform: uppercase;
+}
+
+.callout h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 68px;
+    font-weight: 700;
+    line-height: 1.05;
+    margin: 0 0 28px;
+    color: #111;
+    letter-spacing: 3px;
+}
+
+.callout-link {
+    color: #111;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.callout-link img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Page Headers */
+.page-header h2,
+.page-header h3,
+.page-header h4 {
+    margin: 0;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.page-header h2 {
+    font-size: 3em;
+}
+
+.page-header h3 {
+    font-size: 2em;
+}
+
+.page-header h4 {
+    font-size: 1.5em;
+    margin-top: 5px;
+}
+
+/* Blocks */
+.content-blocks {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.block {
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+}
+
+/* Buttons */
+.click-btn {
+    margin-top: 30px;
+    background: #555;
+    color: #fff;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+.click-btn:hover {
+    background: #777;
+}
+
+/* Responsive */
+/* Half-window (desktop split-screen) layout — intentionally identical to desktop */
+@media (max-width: 1300px) {
+    .hero-section {
+        grid-template-columns: 1.1fr 1fr;
+        min-height: 560px;
+    }
+
+    .hero-text {
+        padding: 48px 56px;
+    }
+
+    .hero-text h1 {
+        font-size: 52px;
+        letter-spacing: 5px;
+    }
+
+    .hero-text p {
+        font-size: 15px;
+    }
+
+    .gallery-section {
+        grid-template-columns: 1fr 1.1fr;
+        column-gap: 56px;
+        padding: 72px;
+        min-height: 560px;
+    }
+
+    .gallery-grid {
+        grid-template: repeat(2, 200px) / repeat(2, 200px);
+        width: 424px;
+        min-height: 424px;
+    }
+
+    .gallery-grid .grid-c {
+        height: 424px;
+    }
+
+    .callout {
+        width: 520px;
+        padding: 40px 48px;
+    }
+
+    .callout h2 {
+        font-size: 52px;
+    }
+}
+
+.menu-icon {
+    width: 30px;
+    margin-left: auto;
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .navbar ul {
+        display: none;
+        /* Hides the navigation links on mobile */
+    }
+
+    .menu-icon {
+        margin: 0 auto;
+        /* Centers the menu icon */
+    }
+}
+
+/* No medium-width overrides: desktop layout persists down to 767px */
+
+@media (max-width: 767px) {
+    .navbar ul {
+        display: none;
+        /* Hide nav links on mobile */
+    }
+
+    .menu-icon {
+        margin: 0 auto;
+        /* Center the menu icon */
+    }
+
+    .hero-section {
+        grid-template-columns: 1fr;
+        /* Stack into a single column */
+        min-height: auto;
+    }
+
+    .hero-text {
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 40px;
+        letter-spacing: 2px;
+    }
+
+    .hero-text p {
+        max-width: 100%;
+    }
+
+    .hero-image img {
+        height: 300px;
+    }
+
+    .click-me-btn {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .gallery-section {
+        grid-template-columns: 1fr;
+        /* Single column layout */
+        padding: 40px 20px;
+        min-height: auto;
+    }
+
+    .gallery-grid {
+        grid-template: repeat(3, 1fr) / 1fr;
+        /* Stack images vertically */
+        width: 100%;
+        min-height: auto;
+    }
+
+    .gallery-grid img {
+        height: 200px;
+    }
+
+    .gallery-grid .grid-c {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        height: 200px;
+    }
+
+    .callout {
+        width: 100%;
+        padding: 30px 20px;
+        margin-top: 30px;
+    }
+
+    .callout-link {
+        color: #111;
+        text-decoration: none;
+        font-weight: 700;
+        font-family: 'Montserrat', sans-serif;
+        display: inline-flex;
+        /* Aligns the text and image on one line */
+        align-items: center;
+        gap: 10px;
+        /* Adds space between the text and the arrow */
+    }
+
+    .callout-link img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .callout h2 {
+        font-size: 40px;
+        letter-spacing: 2px;
+    }
+}
